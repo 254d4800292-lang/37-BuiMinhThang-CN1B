@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản lý</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+<h2>Quản lý hồ sơ</h2>
+<input id="company" class="form-control mb-2" placeholder="Tên công ty">
+<input id="position" class="form-control mb-2" placeholder="Vị trí ứng tuyển">
+<input id="salary" class="form-control mb-2" placeholder="Mức lương kỳ vọng">
+<input id="note" class="form-control mb-2" placeholder="Ghi chú">
+<button onclick="addData()" class="btn btn-primary mb-3">Thêm</button>
+<table class="table table-bordered">
+    <tr>
+        <th>STT</th>
+        <th>Công ty</th>
+        <th>Vị trí</th>
+        <th>Lương</th>
+        <th>Ghi chú</th>
+    </tr>
+    <tbody id="tbody"></tbody>
+</table>
+<p>Tổng số hồ sơ: <span id="total">0</span></p>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="myToast" class="toast">
+    <div class="toast-header">
+      <strong class="me-auto">Thông báo</strong>
+    </div>
+    <div class="toast-body">
+      Cơ hội nghề nghiệp đang rộng mở
+    </div>
+  </div>
+</div>
+<script>
+let hoSo = [];
+function addData(){
+    let tenCongTy = document.getElementById("company").value;
+    let viTri = document.getElementById("position").value;
+    let mucLuong = document.getElementById("salary").value;
+    let ghiChu = document.getElementById("note").value;
+    let mssv = "254D4800292";
+    let soCuoi = mssv[mssv.length - 1];
+    let obj = {
+        tenCongTy,
+        viTri,
+        mucLuong,
+        ghiChu
+    };
+    if(soCuoi % 2 == 0)
+        hoSo.push(obj);
+    else
+        hoSo.unshift(obj);
+    let html = "";
+
+    hoSo.forEach((item,index)=>{
+        html += `
+        <tr>
+            <td>${index+1}</td>
+            <td>${item.tenCongTy}</td>
+            <td>${item.viTri}</td>
+            <td>${item.mucLuong}</td>
+            <td>${item.ghiChu}</td>
+        </tr>`;
+    });
+    document.getElementById("tbody").innerHTML = html;
+    document.getElementById("total").innerHTML = hoSo.length;
+    if(hoSo.length > 15){
+        let toast = new bootstrap.Toast(document.getElementById("myToast"));
+        toast.show();
+    }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
