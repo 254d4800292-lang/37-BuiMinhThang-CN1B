@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Index Page (HTML va Bootstrap 5.3)</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+      crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" 
+      rel="stylesheet">
+      <style>
+        .hover-lift{
+        transition: transform .18s ease, box-shadow .18s ease;
+        }
+        .hover-lift:hover{
+        transform: translateY(-5px);
+        box-shadow:0 .75rem 1.5rem rgba(0,0,0,.08)!important;
+        }
+        .pricing-card {
+        transition: all 0.25s ease;
+        }
+        .pricing-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+        }
+        .pricing-card.border-primary {
+        transform: scale(1.05);
+        }
+        </style>
+    </head>
+	<body class="bg-body">
+		<nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+            <div class="container py-2 d-flex align-items-center">
+    <div class="d-flex align-items-center">
+        <span class="d-inline-flex align-items-center justify-content-center text-bg-primary rounded-3"
+              style="width:34px;height:34px;">
+            <i class="bi bi-stars"></i>
+        </span>
+        <span class="ms-2 fw-bold">Cổng thông tin Thực tập</span>
+    </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+<div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link active">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+            <a href="quanly.html" class="nav-link">Quản lý</a>
+        </li>
+        <li class="nav-item">
+            <a href="debug.html" class="nav-link">Debug</a>
+        </li>
+      </ul>
+</div>
+</nav>
+    <div class="container my-5">
+    <h2 class="text-center mb-4">Doanh nghiệp mơ ước</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <img src="images/google.jpg" class="card-img-top" height="200">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Google</h5>
+                    <p class="card-text">
+                        Môi trường sáng tạo, công nghệ hàng đầu thế giới.
+                    </p>
+                    <a href="#" class="btn btn-primary">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <img src="images/microsoft.jpg" class="card-img-top" height="200">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Microsoft</h5>
+                    <p class="card-text">
+                        Nơi phát triển phần mềm và AI hàng đầu.
+                    </p>
+                    <a href="#" class="btn btn-primary">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <img src="images/nvidia.jpg" class="card-img-top" height="200">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Nvidia</h5>
+                    <p class="card-text">
+                         Dẫn đầu về GPU, AI và công nghệ đồ họa.
+                    </p>
+                    <a href="#" class="btn btn-primary">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+        <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+
+            <div class="card shadow">
+                <img src="images/avatar.jpg" class="card-img-top" height="300">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">Bùi Minh Thắng</h5>
+                    <p class="card-text">
+                        MSSV: 254D4800292 <br>
+                        Ngành: Công nghệ thông tin
+                    </p>
+                    <a href="quanly.html" class="btn btn-primary">
+                        Xem hồ sơ
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
