@@ -24,6 +24,9 @@ function convertGrade(score) {
 */
 // code đã sửa
 function convertGrade(score){
+     if(isNaN(score) || score < 0 || score > 10){
+        return "Điểm không hợp lệ";
+    }
     if(score >= 8.5) return 4;
     else if(score >= 7) return 3;
     else if(score >= 5.5) return 2;
@@ -31,7 +34,7 @@ function convertGrade(score){
     return 0;
 }
 function test(){
-    let s = document.getElementById("score").value;
+    let s = parseFloat(document.getElementById("score").value);
     document.getElementById("result").innerHTML =
     "GPA: " + convertGrade(s);
 }
